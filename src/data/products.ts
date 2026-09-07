@@ -8,15 +8,15 @@ import recuerdosImg from "../assets/products/recuerdos-1.jpeg";
 import tallerImg from "../assets/products/taller-1.jpeg";
 
 export interface Product {
-  id: number;
-  name: string;
-  description?: string;
-  price: number;
-  category: string;
-  image: string;
+    id: number
+    name: string
+    description: string
+    price: number
+    category: string
+    image: string
 }
 
-const products: Product[] = [
+export const products: Product[] = [
   {
     id: 1,
     name: "Llavero personalizados",
