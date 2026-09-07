@@ -1,0 +1,41 @@
+.site-header {
+  padding: 24px;
+}
+
+.site-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-header-logo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.site-header h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.site-header p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 600px) {
+  .site-header-brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-header-logo {
+    width: 90px;
+    height: 90px;
+  }
+}
