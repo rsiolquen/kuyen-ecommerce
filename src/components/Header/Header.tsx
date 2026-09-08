@@ -12,7 +12,7 @@ function Header() {
         />
 
         <div>
-          <h1>KUYEN MANUALIDADES</h1>
+          <h1>Kuyen Manualidades</h1>
           <p>Porque hecho a mano es hecho con amor</p>
         </div>
       </div>

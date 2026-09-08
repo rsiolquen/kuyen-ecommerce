@@ -1,6 +1,7 @@
 #catalog {
   padding: 24px;
   text-align: left;
+  font-family: var(--font-logo);
 }
 
 .catalog-header {
@@ -9,7 +10,9 @@
 
 .catalog-header h1 {
   margin: 0 0 8px;
-  font-size: 40px;
+  font-size: 45px;
+  font-family: var(--font-body);
+  color: var(--color-primary);
 }
 
 .product-grid {

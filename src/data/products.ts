@@ -19,7 +19,7 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "Llavero personalizados",
+    name: "Llaveros",
     description: "Llavero personalizado con diseño único",
     price: 0,
     category: "Llavero",
@@ -27,7 +27,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Cuadro personalizado",
+    name: "Cuadros",
     description: "Cuadro personalizado con diseño único",
     price: 0,
     category: "Cuadro",
@@ -35,7 +35,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "Graduación",
+    name: "Graduaciónes",
     description: "Recuerdo de graduación personalizada con diseño único",
     price: 0,
     category: "Graduación",
@@ -51,7 +51,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "Matrimonio",
+    name: "Matrimonios",
     description: "Recuerdo de matrimonio personalizado con diseño único",
     price: 0,
     category: "Matrimonio",
@@ -75,7 +75,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: "Taller",
+    name: "Talleres",
     description: "Taller guiados para la creación de recuerdos unicos",
     price: 0,
     category: "Taller",
