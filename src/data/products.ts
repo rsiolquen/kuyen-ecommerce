@@ -1,19 +1,19 @@
-import llaveroImg from "../assets/products/llavero-1.jpeg";
-import cuadropImg from "../assets/products/cuadrop-1.jpeg";
-import graduacionImg from "../assets/products/graduacion-1.jpeg";
-import babyShowerImg from "../assets/products/babys-1.jpeg";
-import matrimonioImg from "../assets/products/matrimonio-1.jpeg";
-import navidadImg from "../assets/products/navidad-1.jpeg";
-import recuerdosImg from "../assets/products/recuerdos-1.jpeg";
-import tallerImg from "../assets/products/taller-1.jpeg";
+import llaveroImg from "../assets/products/llaveros/llavero-3.jpeg";
+import cuadropImg from "../assets/products/cuadros/cuadrop-2.jpeg";
+import graduacionImg from "../assets/products/graduacion/graduacion-1.jpeg";
+import babyShowerImg from "../assets/products/baby-shower/babys-1.jpeg";
+import matrimonioImg from "../assets/products/matrimonio/matrimonio-1.jpeg";
+import navidadImg from "../assets/products/navidad/navidad-2.jpeg";
+import personalizadoImg from "../assets/products/personalizados/personalizado-1.jpeg";
+import tallerImg from "../assets/products/talleres/taller-1.jpeg";
 
 export interface Product {
-    id: number
-    name: string
-    description: string
-    price: number
-    category: string
-    image: string
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+  image: string;
 }
 
 export const products: Product[] = [
@@ -71,7 +71,7 @@ export const products: Product[] = [
     description: "Recuerdos personalizados con diseño único",
     price: 0,
     category: "Recuerdos",
-    image: recuerdosImg,
+    image: personalizadoImg,
   },
   {
     id: 9,
