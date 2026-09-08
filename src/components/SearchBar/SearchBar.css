@@ -1,7 +1,6 @@
 .search-bar {
   width: 100%;
   max-width: 500px;
-
   margin: 32px auto;
   padding: 0 20px;
 }
@@ -9,15 +8,11 @@
 .search-bar input {
   width: 100%;
   padding: 14px 18px;
-
   color: var(--color-text);
   background-color: var(--color-surface);
-
   border: 1px solid var(--color-border);
   border-radius: 14px;
-
   outline: none;
-
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -29,6 +24,5 @@
 
 .search-bar input:focus {
   border-color: var(--color-secondary);
-
   box-shadow: 0 0 0 3px rgba(237, 103, 181, 0.12);
 }
