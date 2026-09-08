@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import ProductList from "./components/ProductList/ProductList";
+import Footer from "./components/Footer/Footer";
 import products from "./data/products";
 
 function App() {
@@ -28,8 +29,10 @@ function App() {
           onChange={setSearch}
         />
 
-       <ProductList products={filteredProducts} />
+        <ProductList products={filteredProducts} />
       </main>
+
+      <Footer />
     </>
   );
 }
