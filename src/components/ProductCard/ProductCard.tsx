@@ -11,7 +11,7 @@ function ProductCard({product}: ProductCardProps){
             <div className="product-card-body">
                 <h2>{product.name}</h2>
                 <p>{product.description}</p>
-                <a>{product.price > 0 ? `$${product.price.toLocaleString("es-CL")}` : "Consultar precio"}</a>
+                <a className="product-price">{product.priceFrom && "Desde "} $ {product.price.toLocaleString("es-CL")}</a>
             </div>
         </article>
     );

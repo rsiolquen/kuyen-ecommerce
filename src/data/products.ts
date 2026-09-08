@@ -14,6 +14,7 @@ export interface Product {
   price: number;
   category: string;
   image: string;
+  priceFrom?: boolean;
 }
 
 export const products: Product[] = [
@@ -21,7 +22,7 @@ export const products: Product[] = [
     id: 1,
     name: "Llaveros",
     description: "Llavero personalizado con diseño único",
-    price: 0,
+    price: 7000,
     category: "Llavero",
     image: llaveroImg,
   },
@@ -29,7 +30,7 @@ export const products: Product[] = [
     id: 2,
     name: "Cuadros",
     description: "Cuadro personalizado con diseño único",
-    price: 0,
+    price: 17000,
     category: "Cuadro",
     image: cuadropImg,
   },
@@ -37,7 +38,7 @@ export const products: Product[] = [
     id: 3,
     name: "Graduaciónes",
     description: "Recuerdo de graduación personalizada con diseño único",
-    price: 0,
+    price: 32000,
     category: "Graduación",
     image: graduacionImg,
   },
@@ -45,7 +46,7 @@ export const products: Product[] = [
     id: 4,
     name: "Baby Shower",
     description: "Recuerdo de Baby Shower personalizada con diseño único",
-    price: 0,
+    price: 40000,
     category: "Baby Shower",
     image: babyShowerImg,
   },
@@ -53,7 +54,8 @@ export const products: Product[] = [
     id: 5,
     name: "Matrimonios",
     description: "Recuerdo de matrimonio personalizado con diseño único",
-    price: 0,
+    price: 35000,
+    priceFrom: true,
     category: "Matrimonio",
     image: matrimonioImg,
   },
@@ -61,7 +63,7 @@ export const products: Product[] = [
     id: 6,
     name: "Navidad",
     description: "Adorno de Navidad con diseño único",
-    price: 0,
+    price: 5000,
     category: "Navidad",
     image: navidadImg,
   },
@@ -69,7 +71,8 @@ export const products: Product[] = [
     id: 7,
     name: "Recuerdos",
     description: "Recuerdos personalizados con diseño único",
-    price: 0,
+    price: 20000,
+    priceFrom: true,
     category: "Recuerdos",
     image: personalizadoImg,
   },
@@ -77,7 +80,8 @@ export const products: Product[] = [
     id: 9,
     name: "Talleres",
     description: "Taller guiados para la creación de recuerdos unicos",
-    price: 0,
+    price: 35000,
+    priceFrom: true,
     category: "Taller",
     image: tallerImg,
   },
