@@ -6,14 +6,27 @@ interface ProductCardProps {
 
 function ProductCard({product}: ProductCardProps){
     return (
-        <article className="product-card">
-            <img className="product-card-image" src={product.image} alt={product.name}/>
-            <div className="product-card-body">
-                <h2>{product.name}</h2>
-                <p>{product.description}</p>
-                <a className="product-price">{product.priceFrom && "Desde "} $ {product.price.toLocaleString("es-CL")}</a>
-            </div>
-        </article>
+     <article className="product-card">
+      <img className="product-card-image"
+        src={product.image}
+        alt={product.name}
+      />
+
+      <div className="product-card-body">
+        <span className="product-category">
+          {product.category}
+        </span>
+
+        <h2>{product.name}</h2>
+
+        <p>{product.description}</p>
+
+        <p className="product-price">
+          {product.priceFrom && "Desde "}
+          ${product.price.toLocaleString("es-CL")}
+        </p>
+      </div>
+    </article>
     );
 }
 

@@ -122,3 +122,23 @@
         text-align: center;
     }
 }
+/* Ajuste para móviles pequeños */
+@media (max-width: 360px) {
+    .footer-container {
+        width: 100%;
+        padding: 24px 16px;
+    }
+
+    .footer-socials {
+        gap: 12px;
+    }
+
+    .footer-socials a {
+        font-size: 2.5rem;
+    }
+
+    .footer-slogan {
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+    }
+}

@@ -5,9 +5,13 @@
   border-radius: 16px;
   overflow: hidden;
   background-color: var(--color-surface);
+
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .product-card:hover {
@@ -23,35 +27,60 @@
 
 .product-card-body {
   padding: 16px;
+
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
+/* Categoría */
+.product-category {
+  margin-bottom: 8px;
+
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+
+  color: var(--color-secondary);
+}
+
+/* Nombre del producto */
 .product-card-body h2 {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
+
   font-family: var(--font-logo);
-  font-size: 1.7rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.2;
-  color: var(--color-primary);
+
   text-align: center;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
+
+  color: var(--color-primary);
 }
 
+/* Descripción */
 .product-card-body p {
   margin: 6px 0;
-  line-height: 1.35;
-  color: var(--color-secondary);
+
   font-family: var(--font-body);
+  line-height: 1.35;
+
+  color: var(--color-secondary);
 }
 
-.product-card-body a {
+/* Precio */
+.product-card-body .product-price {
   margin-top: auto;
-  padding-top: 12px;
-  color: var(--color-pink-soft);
+  padding-top: 14px;
+
   font-family: var(--font-script);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  text-decoration: none;
+
+  color: var(--color-pink-soft);
 }
