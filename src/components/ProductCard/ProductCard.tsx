@@ -1,15 +1,16 @@
 import "./ProductCard.css";
-import type { Product } from "../../data/products";
+
 interface ProductCardProps {
-    product: Product
+  product: any;
 }
 
-function ProductCard({product}: ProductCardProps){
-    return (
-     <article className="product-card">
-      <img className="product-card-image"
-        src={product.image}
-        alt={product.name}
+function ProductCard({ product }: ProductCardProps) {
+  return (
+    <article className="product-card">
+      <img
+        className="product-card-image"
+        src={product.images[0]}
+        alt={product.title}
       />
 
       <div className="product-card-body">
@@ -17,17 +18,16 @@ function ProductCard({product}: ProductCardProps){
           {product.category}
         </span>
 
-        <h2>{product.name}</h2>
+        <h2>{product.title}</h2>
 
         <p>{product.description}</p>
 
         <p className="product-price">
-          {product.priceFrom && "Desde "}
-          ${product.price.toLocaleString("es-CL")}
+          ${product.price}
         </p>
       </div>
     </article>
-    );
+  );
 }
 
 export default ProductCard;

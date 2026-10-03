@@ -1,9 +1,8 @@
 import "./ProductList.css";
 import ProductCard from "../ProductCard/ProductCard";
-import type { Product } from "../../data/products";
 
 interface ProductListProps {
-  products: Product[];
+  products: any[];
 }
 
 function ProductList({ products }: ProductListProps) {
@@ -14,7 +13,7 @@ function ProductList({ products }: ProductListProps) {
       </div>
 
       <div className="product-grid">
-        {products.map((product) => (
+        {products.map((product: any) => (
           <ProductCard
             key={product.id}
             product={product}
