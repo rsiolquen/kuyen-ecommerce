@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Pacifico&display=swap");
 
 :root {
-  --color-primary: #b993e6;
-  --color-secondary: #ed67b5;
+  --color-primary: #d0b3f2;
+  --color-secondary: #ff9bd4;
   --color-pink-soft: #f6c6d8;
   --color-blue-soft: #aee9f5;
   --color-green-soft: #dff4c7;
@@ -18,7 +18,6 @@
   --font-body: system-ui, "Segoe UI", sans-serif;
   font-family: var(--font-body);
   color: var(--color-text);
-  background-color: var(--color-background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -39,7 +38,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: #f6c6d8;
-  background: -webkit-linear-gradient(to right, #493a5b, #77335b);
+  background: -webkit-linear-gradient(to right #77335b, #493a5b);
   background: linear-gradient(to right, #493a5b, #77335b);
 
 }
