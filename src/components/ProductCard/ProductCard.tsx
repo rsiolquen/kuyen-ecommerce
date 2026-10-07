@@ -1,7 +1,8 @@
 import "./ProductCard.css";
+import type { Product } from "../../types/Product";
 
 interface ProductCardProps {
-  product: any;
+  product: Product;
 }
 
 function ProductCard({ product }: ProductCardProps) {

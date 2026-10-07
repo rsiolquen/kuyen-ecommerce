@@ -5,27 +5,35 @@ import Loader from "../components/Loader/Loader";
 import ErrorMessage from "../components/ErrorMessage/ErrorMessage";
 import ProductList from "../components/ProductList/ProductList";
 import SearchBar from "../components/SearchBar/SearchBar";
+import type { Product } from "../types/Product";
 
 function CatalogPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [productsDJ, setProductsDJ] = useState<any[]>([]);
+  const [productsDJ, setProductsDJ] = useState<Product[]>([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("https://dummyjson.com/products");
+        const response = await fetch(
+          "https://dummyjson.com/products",
+        );
 
         if (!response.ok) {
           throw new Error("Falló la carga de productos");
         }
 
-        const data = await response.json();
+        const data: { products: Product[] } =
+          await response.json();
 
         setProductsDJ(data.products);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("Ocurrió un error inesperado");
+        }
       } finally {
         setLoading(false);
       }
@@ -34,8 +42,10 @@ function CatalogPage() {
     fetchProducts();
   }, []);
 
-  const filteredProducts = productsDJ.filter((product: any) =>
-    product.title.toLowerCase().includes(search.trim().toLowerCase()),
+  const filteredProducts = productsDJ.filter((product) =>
+    product.title
+      .toLowerCase()
+      .includes(search.trim().toLowerCase()),
   );
 
   if (loading) {
@@ -48,10 +58,15 @@ function CatalogPage() {
 
   return (
     <>
-      <SearchBar value={search} onChange={setSearch} />
+      <SearchBar
+        value={search}
+        onChange={setSearch}
+      />
 
       {filteredProducts.length === 0 ? (
-        <p>No se encontraron productos para: {search}</p>
+        <p>
+          No se encontraron productos para: {search}
+        </p>
       ) : (
         <ProductList products={filteredProducts} />
       )}
