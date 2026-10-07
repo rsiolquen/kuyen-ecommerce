@@ -24,6 +24,21 @@ La aplicación también contempla estados de carga y error, componentes reutiliz
 
 ---
 
+## Componentes
+
+| Componente | Función |
+| --- | --- |
+| `Header` | Muestra el logo, nombre de Kuyen Manualidades y lema de la tienda. |
+| `SearchBar` | Input controlado para buscar productos por nombre. |
+| `ProductCard` | Recibe un producto mediante props y muestra imagen, categoría, nombre, descripción y precio. |
+| `ProductList` | Recibe los productos y genera las tarjetas mediante `map` y `key={product.id}`. |
+| `Loader` | Indicador visual mientras se espera la respuesta de la API. |
+| `ErrorMessage` | Informa al usuario cuando ocurre un error al obtener los productos. |
+| `Footer` | Contiene información de Kuyen y enlaces a Instagram, correo y WhatsApp. |
+| `CatalogPage` | Administra el consumo de la API, productos, búsqueda, carga y errores. |
+
+---
+
 ## Funcionalidades
 
 - Consumo de productos desde una API pública.
@@ -103,21 +118,6 @@ ProductList
 Si no existen coincidencias, se muestra un mensaje informando que no se encontraron productos.
 
 Al borrar el contenido del buscador, vuelven a mostrarse todos los productos obtenidos desde la API.
-
----
-
-## Componentes
-
-| Componente | Función |
-| --- | --- |
-| `Header` | Muestra el logo, nombre de Kuyen Manualidades y lema de la tienda. |
-| `SearchBar` | Input controlado para buscar productos por nombre. |
-| `ProductCard` | Recibe un producto mediante props y muestra imagen, categoría, nombre, descripción y precio. |
-| `ProductList` | Recibe los productos y genera las tarjetas mediante `map` y `key={product.id}`. |
-| `Loader` | Indicador visual mientras se espera la respuesta de la API. |
-| `ErrorMessage` | Informa al usuario cuando ocurre un error al obtener los productos. |
-| `Footer` | Contiene información de Kuyen y enlaces a Instagram, correo y WhatsApp. |
-| `CatalogPage` | Administra el consumo de la API, productos, búsqueda, carga y errores. |
 
 ---
 
@@ -284,6 +284,9 @@ Kuyen-Ecommerce/
 │   │   ├── CatalogPage.tsx
 │   │   └── CatalogPage.css
 │   │
+│   ├── types/
+│   │   └── Product.ts
+│   │
 │   ├── App.tsx
 │   ├── App.css
 │   ├── index.css
@@ -294,9 +297,11 @@ Kuyen-Ecommerce/
 └── package-lock.json
 ```
 
-Cada componente mantiene separados sus archivos `.tsx` y `.css`, ayudando a mantener una estructura modular y ordenada.
+Cada componente mantiene separados sus archivos `.tsx` y `.css`, ayudando a conservar una estructura modular y ordenada.
 
-Los productos del catálogo ya no dependen de los datos locales utilizados en la primera entrega: en esta evaluación se obtienen directamente desde DummyJSON.
+La carpeta `types` contiene la interfaz `Product`, que define la estructura de los productos utilizados desde DummyJSON y permite evitar el uso de `any` en los componentes.
+
+Los productos del catálogo se obtienen directamente desde DummyJSON mediante una petición con `fetch`.
 
 ---
 
